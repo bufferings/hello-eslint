@@ -24,5 +24,13 @@ module.exports = {
     project: ['./tsconfig.json'],
   },
   plugins: ['react', '@typescript-eslint', 'jest'],
-  rules: {},
+  rules: {
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: 'function-declaration',
+        unnamedComponents: 'function-expression',
+      },
+    ],
+  },
 };
